@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
 const http = require('http').Server(app)
+const path = require('path');
+
+app.use(express.static('public'))
 
 app.get('/', function(req, res){
-    res.send('server working')
+    res.sendFile(__dirname+'/index.html')
 })
 
 app.listen(3000, function(){
