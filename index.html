@@ -18,8 +18,45 @@
           <button class="btn btn-outline-success" type="button">New Battle</button>
         </nav>
       </div>
-    </div>
-  </div>
+    </div> <!-- end of row -->
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-6">
+        <div class="card" style="width: 20rem;">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="card-img-top" id="characterOne" src="./img/hero.gif" alt="Hero" loop='infinite'>
+            </div>
+            <!--<div class="col-md-6">
+              <img class="card-img-top" id="characterTwo" src="./img/hero.gif" alt="Hero" loop='infinite'>
+            </div>-->
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Teku</h4>
+            <div class="btn-group">
+              <a href="#" class="btn btn-danger">Attack</a>
+              <a href="#" class="btn btn-info">Magic</a>
+              <a href="#" class="btn btn-primary">Defend</a>
+            </div>
+            <div class="progressContainer">
+              <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50</div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            
+            <!--<div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-danger">Attack</button>
+              <button type="button" class="btn btn-secondary">Defend</button>
+              <button type="button" class="btn btn-info">Magic</button>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div> <!-- end of row -->
+  </div> <!-- end of container -->
   <script src="main.js"></script>
 </body>
 </html>
