@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/YajJackson/playground/issues"
   },
-  "homepage": "https://github.com/YajJackson/playground#readme"
+  "homepage": "https://github.com/YajJackson/playground#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
