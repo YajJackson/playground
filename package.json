@@ -1,0 +1,19 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "a place to play around",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YajJackson/playground.git"
+  },
+  "author": "Jay Jackson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YajJackson/playground/issues"
+  },
+  "homepage": "https://github.com/YajJackson/playground#readme"
+}
