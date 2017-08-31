@@ -15,16 +15,17 @@
     <div class="row">
       <div class="col-md-12">
         <nav class="navbar navbar-light bg-light">
-          <h4>Adventure Stuff</h4>
+          <h2>Adventure Stuff</h2>
+          <button class="btn btn-outline-success" id="newGameButton" type="button">New Game</button>
         </nav>
       </div>
     </div> <!-- end of row -->
     <div class="row">
       <div class="col-md-4">
-        <div class="well" id="evenLog">
-          <div class="list-group-item">Event Log</div>
+        <div class="well">
+          <h4 class="list-group-item">Event Log</h4>
           <div class="panel-body leftscrollbar" id="style-1">
-            <ul class="list-group no-padding">
+            <ul class="list-group no-padding" id="eventLog">
               <li class="list-group-item">Dapibus ac facilisis in</li>         
               <li class="list-group-item list-group-item-primary">This is a primary list group item</li>
               <li class="list-group-item list-group-item-secondary">This is a secondary list group item</li>
@@ -60,8 +61,7 @@
             </div>
           </div>
           <div class="card-body">
-            <h4 class="card-title">Teku</h4>
-            
+            <h4 class="card-title" id="characterName"></h4>
             <div class="btn-group">
               <a 
                 href="#" 
@@ -84,13 +84,13 @@
             </div>
             <div class="progressContainer">
               <div class="progress">
-                <div class="progress-bar bg-danger" id="healthBar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50</div>
+                <div class="progress-bar bg-danger" id="healthBar" role="progressbar" style="width: 0%">0</div>
               </div>
               <div class="progress">
-                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" id="energyBar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" id="energyBar" role="progressbar" style="width: 0%"></div>
               </div>
               <div class="progress">
-                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" id="manaBar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" id="manaBar" role="progressbar" style="width: 0%"></div>
               </div>
             </div>
           </div>
