@@ -16,9 +16,14 @@ body {
 .progress {
     margin-bottom: 5px;
 }
+
+/*.eventLog {
+    height: 
+}*/
+
 .leftscrollbar {
     overflow-y: scroll; 
-    height: 70vh;
+    height: 60vh;
     direction: rtl;
 }
 #style-1::-webkit-scrollbar-track
