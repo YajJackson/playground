@@ -18,13 +18,13 @@ $(document).ready(function(){
     $(characterName).text(player.name)
     $(healthBar).animate({
       width: `${player.health}%`
-    }, 500).text(player.health)
+    }, 500, "linear").text(player.health)
     $(energyBar).animate({
       width: `${player.energy}%`
-    }, 500)
+    }, 500, "linear")
     $(manaBar).animate({
       width: `${player.mana}%`
-    }, 500)
+    }, 500, "linear")
   }
 
   $(newGameButton).click(function(){
@@ -38,7 +38,7 @@ $(document).ready(function(){
       player.energy -= cost
       $(energyBar).animate({
         width: `${player.energy}%`
-      })
+      }, 500, "linear")
       return true
     } else {
       alert('Not enough energy')
@@ -74,20 +74,20 @@ $(document).ready(function(){
 
   const restHero = () => {
     if(player.energy < 100){
-      if(player.energy <= 60){
-        player.energy += 40
+      if(player.energy <= 75){
+        player.energy += 25
       } else {
         player.energy = 100
       }
       $(energyBar).animate({
         width: `${player.energy}%`
-      })
+      }, 500, "linear")
     }
     restEvent()
   }
 
   $(restButton).click(function(){
-    console.log('Rest child, you will pass a turn, but regenerate 40 energy to get back into the fight.')
+    console.log('Rest child, you will pass a turn, but regenerate energy to get back into the fight.')
     restHero()
   })
   
