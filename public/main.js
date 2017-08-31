@@ -32,6 +32,7 @@ $(document).ready(function(){
     setStage()
   })
 
+  // Attack stuff
   const tryAttack = (cost) => {
     if(cost <= player.energy){
       player.energy -= cost
@@ -44,7 +45,7 @@ $(document).ready(function(){
       return false
     }
   }
-  // <li class="list-group-item list-group-item-danger">This is a danger list group item</li>
+
   const attackEvent = (success, result) => {
     if(success){
       let li = document.createElement('li')
@@ -54,13 +55,40 @@ $(document).ready(function(){
   }
 
   $(attackButton).click(function(){
+    
     if(tryAttack(15)){
       console.log('Attack successful')
-      attackResult = `${player.name} dealt 20 damage.`
+      attackResult = `${player.name} dealt 20 damage`
       attackEvent(true, attackResult)
     } else {
       console.log('Attack failed')
     }
+  })
+
+  // Rest stuff
+  const restEvent = () => {
+    let li = document.createElement('li')
+    $(li).addClass("list-group-item list-group-item-secondary").text(`${player.name} rests for a moment, attempting to regain some strength`)
+    $(eventLog).append(li)
+  }
+
+  const restHero = () => {
+    if(player.energy < 100){
+      if(player.energy <= 60){
+        player.energy += 40
+      } else {
+        player.energy = 100
+      }
+      $(energyBar).animate({
+        width: `${player.energy}%`
+      })
+    }
+    restEvent()
+  }
+
+  $(restButton).click(function(){
+    console.log('Rest child, you will pass a turn, but regenerate 40 energy to get back into the fight.')
+    restHero()
   })
   
 })
